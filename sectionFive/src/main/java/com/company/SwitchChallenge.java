@@ -37,22 +37,34 @@ public class SwitchChallenge {
 //            }
 //
 //        }
-//                isOdd(5);
-
-    }
-//    public static boolean isOdd(int number){
-//        if(number < 0){
-//            System.out.println("false");
-//            return false;
-//        }
-//        if(number % 2 == 1){
-//            System.out.println("true");
-//            return true;
-//        }
 //
-//        return false;
-//    }
+                sumOdd(-1,100);
+    }
+    public static boolean isOdd(int number){
+        if(number < 0){
+//            System.out.println("false");
+            return false;
+        }
+        if(number % 2 == 1){
+//            System.out.println("true");
+            return true;
+        }
 
-    
+        return false;
+    }
+
+    public static int sumOdd(int start, int end){
+        int sum = 0;
+        if(start < 0 && end < 0 && end < start){
+            return -1;
+        }
+        for(int i = start; i < end; i++){
+            if(isOdd(i) == true){
+                sum += i;
+            }
+        }
+//        System.out.println(sum);
+        return sum;
+    }
 
 }
